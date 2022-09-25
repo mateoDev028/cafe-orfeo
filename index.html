@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Café Orfeo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel= "stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans&display=swap" rel="stylesheet">   
+</head>
+<header>
+  <div id="navbar" style="display: none">
+    <nav class="navbar navbar-light" style="background-color: #8a1616;">   
+      <a class="navbar-brand" href="#">LOGO</a>
+      <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#stripe">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#mapa">Ubicación</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+        <div class="cover d-flex justify-content-center d-flex align-items-center flex-column">
+          <h1>Café Orfeo</h1>
+      </div>
+      </header>
+  <body>
+        <section>
+          <div class="fuji mt-5 mb-5">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                   <div title="" class= "cover cover-small" style="background-image:url(./imagenes/cards/imagen1.jpg)">
+                  </div>
+                   <div class="card-body">
+                     <h5 class="card-title">Métodos de preparación</h5>
+                     <p class="card-text"> <b>¿Cómo querés que hagamos tu café?</b> <br>En nuestro local contamos con distinas cafeteras para lograr el café que nuestro cliente desee</p>
+                  </div>
+                 </div>
+                </div>
+               <div class="col">
+                   <div class="card">
+                    <div title="" class= "cover cover-small" style="background-image:url(./imagenes/cards/imagen2.jpg)">
+                    </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Granos de Selección</h5>
+                        <p class="card-text"> <b>¿Por qué nuestro café es especial?</b> <br>Porque trabajamos con pequeños caficultores de limitada producción</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div title="" class= "cover cover-small" style="background-image:url(./imagenes/cards/imagen3.jpg)">
+                      </div>
+                       <div class="card-body">
+                         <h5 class="card-title">Responsabilidad con el medioambiente</h5>
+                         <p class="card-text"> <b>¿Sabías que?</b> <br>Nuestros productos son sustentables porque son creados con elementos reciclados</p>
+                       </div>
+                     </div>
+                   </div>
+              </div> 
+           </div>
+        </section>
+        <section>
+          <div class="container mt-5 mb-5">
+          <div class="row">
+            <div class= "col" >
+              <img src="imagenes/CoffeeDoddle.svg" alt="persona abrazando taza de café"/>
+            </div>
+            <div class= "col-12 col-sm-6">
+            <h3>¡Comienza tu día con una taza de café!</h3>
+            <p>Ordena tu bolsa de café Premium o busca tu BaristaCoffe más cercano</p>
+            <a href="#mapa" >Ir al mapa</a>
+            </div>
+            </div>
+        </section>
+        <section id="stripe">
+          <!--CARRITO-->
+          <div class="container">
+          <div class="row">
+          <h1>Carrito</h1>
+          <hr>
+          <div class="row" id="cards"></div>
+      </div>
+      <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+      </template>
+      
+      <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+          <button class="btn btn-danger btn-sm">
+                -
+          </button>
+            <button class="btn btn-info btn-sm">
+                +
+            </button>
+            
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+      </template>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+      
+      <template class="container" id="template-card">
+          <div class="col-12 col-lg-3 stripe-containerdos total">
+            <div class="cardcarrito">
+              <img src= "" alt="" class= "card-img-top">
+              <div class="card-body">
+                <h5>Titulo</h5>
+                <p>precio</p>
+                <button class="btn btn-dark">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+          </section>
+        <!--MAPA-->
+        <section>
+          <div class="container mt-5 mb-5 text-center" id="mapa">
+            <h4>
+              ¡Aquí nos vemos!
+            </h4>
+            <p>
+              Alvear 568, Ituzaingó Norte
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.847292125825!2d-58.67669071363615!3d-34.65855931784592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf6308cbe98d%3A0x43761cd0d7b84afd!2sGral.%20Alvear%2C%20B1714%20Ituzaing%C3%B3%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1640647950619!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <script src="app.js"></script> 
+  </body>
+</html>

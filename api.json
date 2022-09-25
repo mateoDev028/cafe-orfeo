@@ -1,0 +1,51 @@
+[
+    {
+      "precio": 150,
+      "id": "A",
+      "title": "Espresso",
+      "thumbnailUrl": "./imagenes/tira_cafes/espresso.jpg"
+    },
+    {
+      "precio": 180,
+      "id": "B",
+      "title": "Capuccino",
+      "thumbnailUrl": "./imagenes/tira_cafes/capuccino.jpg"
+    },
+    {
+      "precio": 220,
+      "id": "C",
+      "title": "Flat White",
+      "thumbnailUrl": "./imagenes/tira_cafes/flatwhite.jpg"
+    },
+    {
+      "precio": 230,
+      "id": "D",
+      "title": "Caramel Macchiato",
+      "thumbnailUrl": "./imagenes/tira_cafes/macchiato.jpg"
+    },
+    {
+      "precio": 150,
+      "id": "E",
+      "title": "Cupcake",
+      "thumbnailUrl": "./imagenes/tira_comida/cupcake.jpg"
+    },
+    {
+      "precio": 200,
+      "id": "F",
+      "title": "Roll Canela",
+      "thumbnailUrl": "./imagenes/tira_comida/roll_canela.jpg"
+    },
+    {
+      "precio": 230,
+      "id": "G",
+      "title": "Croissant",
+      "thumbnailUrl": "./imagenes/tira_comida/croissant.jpg"
+    },
+    {
+      "precio": 270,
+      "id": "H",
+      "title": "Cheesecake",
+      "thumbnailUrl": "./imagenes/tira_comida/cheesecake.jpg"
+    }
+    
+  ]
